@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1><b>Welcome to the Head First Lounge</b></h1>
+	 <img src="../images/drinks.gif"/>
+	 <font size="1" face="굴림">Join us any evening for refreshing elixirs, 
+		conversation and maybe a game or two of 
+		Dance Dance Revolution.  
+		Wireless access is always provided;  
+		BYOWS (Bring Your Own Web Server).
+	</font>
+	<h2><b>Directions</b></h2>
+	<h5>You'll find us right in the center 
+		of downtown Webville.  Come join us!
+	</h5>
+
+</body>
+</html>

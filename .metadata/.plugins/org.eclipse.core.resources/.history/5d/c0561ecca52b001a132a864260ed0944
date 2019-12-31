@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Kang In Sun</title>
+</head>
+<body>
+	<h1><b>강인선</b></h1>
+	 <img src="../images/hadoop"/>
+	 <br/>
+	 <p><font size="3" face="굴림">강인선의 
+		<b><i>자기소개</i></b> <i>페이지 입니다</i>.  
+	</font></p>
+	
+	
+	<h2><b>연혁</b></h2>
+		<ol>
+			<li>1994년 출생</li>
+			<li>2001년 검단초 병설 유치원 졸업</li>
+			<li>2001년 검단초등학교 입학</li>
+			<li>2007년 검단초등학교 졸업</li>
+			<li>2007년 영성중학교 입학</li>
+			<li>2010년 영성중학교 졸업</li>
+			<li>2010년 풍생고등학교 입학</li>
+			<li>2013년 풍생고등학교 졸업</li>
+			<li>2013년 한국외국어대학교 글로벌 캠퍼스 산업경영공학과 입학</li>
+			<li>2019년 한국외국어대학교 글로벌 캠퍼스 산업경영공학과 졸업</li>
+		</ol>
+	
+	<h1>2019년</h2>
+		<ul>
+			<li>끝났습니다</li>
+			<li>새해복</li>
+			<li>많이</li>
+			<li>받으세요</li>		
+		</ul>
+	<br/><br/>		
+</body>
+</html>
