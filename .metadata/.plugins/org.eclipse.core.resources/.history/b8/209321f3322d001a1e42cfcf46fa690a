@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="1"  height="300" width="150">
+		<tr>회원가입</tr>
+		<tr> 
+			<td>이름</td>
+			<td><input type="text" name="name"></td> 
+		</tr>
+		
+		<tr> 
+			<td>사용자ID</td> 
+			<td><input type="text" name="id"></td> 
+		</tr>
+		
+		<tr> 
+		<td>암호</td> 
+		<td></td> 
+	    </tr>
+	    
+		<tr>
+			<td>암호확인</td> 
+			<td></td> 
+		</tr>
+		
+		<tr> 
+			<td>주민등록번호</td> 
+			<td></td> 
+		</tr>
+		
+		<tr> 
+			<td>전화번호</td>
+			<td></td> 
+		</tr>
+		
+		<tr> 
+			<td>성별</td> 
+			<td></td> 
+		</tr>
+		
+		<tr> <td>직업</td> <td></td> </tr>
+		<tr> <td>email 주소</td> <td></td> </tr>
+		<tr></tr>
+	</table>
+</body>
+</html>
+
+
+
