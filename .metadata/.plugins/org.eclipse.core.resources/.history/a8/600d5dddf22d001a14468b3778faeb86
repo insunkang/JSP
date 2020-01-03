@@ -1,0 +1,7 @@
+@charset "EUC-KR";
+h1{
+	color: blue;
+}
+myclass{
+	background-image: url("../../images/background.gif");
+}

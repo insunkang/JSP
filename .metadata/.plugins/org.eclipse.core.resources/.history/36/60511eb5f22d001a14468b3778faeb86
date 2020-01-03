@@ -1,0 +1,4 @@
+@charset "EUC-KR";
+body{
+	background-image: url("../../images/background.gif");
+}
