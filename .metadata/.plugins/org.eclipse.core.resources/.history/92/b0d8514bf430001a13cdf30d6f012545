@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="EUC-KR">
+	<title>Insert title here</title>
+	<script type="text/javascript" src="../common/js/test.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+	dd();
+	</script>
+	<input type="button" value="클릭하세요" onclick="dd()">
+</body>
+</html>

@@ -1,0 +1,6 @@
+/**
+ * 
+ */
+function dd(){
+	alert("hello")
+}
