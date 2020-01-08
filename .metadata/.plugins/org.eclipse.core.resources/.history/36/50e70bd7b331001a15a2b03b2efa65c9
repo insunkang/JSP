@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- 날짜 시간과 관련된 자바스크립트 내장객체(Date)  -->
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		today = new Date();
+		document.write(today);
+		str =today.getFullYear() +"년";
+		str =str+(today.getMonth()+1)+"월";
+		str =str+today.getDate()+"일";
+		str =str+today.getHours()+"시";
+		str =str+today.getMinutes()+"분";
+		str =str+today.getSeconds()+"초";
+		day =today.getDay();
+		str =str+weekday;
+		
+		//switch활용해서 요일번호를 요일명으로 변경하기
+		weekday=day; //요일명
+		document.write("<h2>"+str+"</h2>");
+			switch(weekday){
+			case 0:
+				document.write("일");
+				break;
+			case 1:
+				document.write("월");
+				break;
+			case 2:
+				document.write("화");
+				break;
+			case 3:
+				document.write("수");
+				break;
+			case 4:
+				document.write("목");
+				break;
+			case 5:
+				document.write("금");
+				break;
+			case 6:
+				document.write("토");
+				break;
+			
+		
+			}
+			
+		
+			
+		
+	</script>
+</body>
+</html>
