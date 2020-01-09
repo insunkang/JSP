@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="EUC-KR">
+	<title>Insert title here</title>
+</head>
+<body>
+	<h1>함수의 표현식</h1>
+	<h2>
+		변수 = function 함수명(){<br/>
+				//실행할 명령문
+		}
+	</h2>
+	<script type="text/javascript">
+		myfunc(90);
+		myfunc=	function test(num) {
+				if(num>90){
+					alert("성공");
+				}else{
+					alert("실패");
+				}
+			}
+	</script>
+</body>
+</html>
