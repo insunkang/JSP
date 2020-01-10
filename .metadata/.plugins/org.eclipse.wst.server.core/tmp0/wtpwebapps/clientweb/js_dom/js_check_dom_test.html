@@ -29,12 +29,27 @@
 			}
 		}
 		//여기에 dom을 적용해보세요	
-	}	
+			
+		
+			
+			textNode = document.createTextNode(checkVal);
+			parentNode = document.getElementById("result");
+			//텍스트 노드를 추가하기 전에 기존에 작업한 하위노드가 있는지 확인하고 제거
+			//제거해야 되는 노드가 동적으로 생성된 노드 하나 이므로 아래와 같이 작업
+			if(parentNode.childNodes.length!=0){
+				parentNode.removeChild(parentNode.firstChild)
+			}
+			parentNode.appendChild(textNode);
+			
+			
+		
+	}
+	
 
 </script>
 </head>
 <body>
-	<center>
+	
 		<form name="cbfmt">
 			<label>아이스크림</label> 
 			<input type="checkbox" name="food"
@@ -55,6 +70,6 @@
 			<input type="button" value="전송" onclick="ckFunc()">
 		</form>
 		<div id="result"></div>
-	</center>
+	
 </body>
 </html>

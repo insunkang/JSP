@@ -1,8 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+	
+	function insertP() {
+		pNode = document.createElement("p");
+		pNode.setAttribute("style", "background: yellow;");
+		textNode = document.createTextNode("newP");
+		pNode.appendChild(textNode);		
+		parentNode = document.getElementById("root");						
+		parentNode.appendChild(pNode);
+		
+	}
+	function deleteP() {
+		targetNode = document.getElementById("root");
+		delNode = targetNode.lastChild;
+		if(delNode.nodeType==3){
+		targetNode.removeChild(delNode);
+		delNode = targetNode.lastChild;
+		targetNode.removeChild(delNode);
+		}else{
+		targetNode.removeChild(delNode);
+		}
+		
+	}
+	function deleteDivAndP() {
+	parentNode=document.getElementById("root");
+	childnodelist = parentNode.childNodes;
+	//haschildNodes - 하위노드가 있으면 true, 없으면 false
+	while(parentNode.hasChildNodes()){
+		console.log("삭제완료");
+		parentNode.removeChild(parentNode.lastChild);
+	}
+	
+	/* size = childnodelist.length;
+	for(i=0;i<size;i++){
+		//alert(childnodelist.length);
+		console.log(size);
+		parentNode.removeChild(parentNode.lastChild);
+	} */
+				
+		
+			
+		
+	}
+	
+	
+	
+	</script>
 </head>
 <body>
 	<div id="layer"></div>
