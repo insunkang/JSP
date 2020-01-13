@@ -152,7 +152,7 @@
 		
 
 
-      <Context docBase="C:\iot\work\webwork\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\iot\work\webwork\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\clientweb" path="/clientweb" reloadable="true" source="org.eclipse.jst.jee.server:clientweb"/></Host>
+      <Context docBase="C:\iot\work\webwork\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\iot\work\webwork\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\clientweb" path="/clientweb" reloadable="true" source="org.eclipse.jst.jee.server:clientweb"/><Context docBase="C:\iot\work\webwork\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\serverweb" path="/serverweb" reloadable="true" source="org.eclipse.jst.jee.server:serverweb"/></Host>
     </Engine>
   </Service>
 </Server>

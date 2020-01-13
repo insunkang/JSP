@@ -152,7 +152,7 @@
 		
 
 
-      <Context docBase="clientweb" path="/clientweb" reloadable="true" source="org.eclipse.jst.jee.server:clientweb"/></Host>
+      <Context docBase="clientweb" path="/clientweb" reloadable="true" source="org.eclipse.jst.jee.server:clientweb"/><Context docBase="serverweb" path="/serverweb" reloadable="true" source="org.eclipse.jst.jee.server:serverweb"/></Host>
     </Engine>
   </Service>
 </Server>
