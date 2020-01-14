@@ -1,4 +1,4 @@
-package jdbc.member.exam;
+package exam;
 
 import java.util.ArrayList;
 
