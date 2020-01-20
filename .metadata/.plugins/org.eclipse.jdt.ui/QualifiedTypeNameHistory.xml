@@ -12,5 +12,7 @@
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="exam.DBUtil"/>
 <fullyQualifiedTypeName name="fw.DeptDAOImpl"/>
+<fullyQualifiedTypeName name="javax.security.auth.message.callback.PrivateKeyCallback.Request"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 <fullyQualifiedTypeName name="fw.DeptDTO"/>
 </qualifiedTypeNameHistroy>

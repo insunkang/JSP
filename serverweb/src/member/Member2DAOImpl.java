@@ -1,4 +1,4 @@
-package fw;
+package member;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,22 +6,23 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import exam.DBUtil;
-import exam.MemberDTO;
+import member.DBUtil;
+import member.Member2DTO;
+import member.Member2DAO;
 
 
 
-public class DeptDAOImpl implements DeptDAO {
-	public int delete(String deptNo) {
+public class Member2DAOImpl implements Member2DAO {
+	public int delete(String id) {
 		Connection con = null;
 		PreparedStatement stmt = null;
 		
-		String sql = "delete from mydept where deptNo = ?";
+		String sql = "delete from member where id = ?";
 		int	result = 0;
 		try {
 			con = DBUtil.getConnect();
 			stmt = con.prepareStatement(sql);
-			stmt.setString(1, deptNo);
+			stmt.setString(1, id);
 			result = stmt.executeUpdate();
 		}catch(SQLException e) {
 			e.printStackTrace();
@@ -32,11 +33,11 @@ public class DeptDAOImpl implements DeptDAO {
 	}
 	
 	
-	public ArrayList<DeptDTO> DeptList(){
+	public ArrayList<Member2DTO> DeptList(){
 		System.out.println("DeptList호출 => 서블릿이 넘겨준 파라미터 출력");
-		ArrayList<DeptDTO> DeptList = new ArrayList<DeptDTO>();
-		DeptDTO Dept =null;
-		String sql = "select * from mydept";
+		ArrayList<Member2DTO> DeptList = new ArrayList<Member2DTO>();
+		Member2DTO Dept =null;
+		String sql = "select * from member";
 		Connection con = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -46,8 +47,8 @@ public class DeptDAOImpl implements DeptDAO {
 			rs = stmt.executeQuery();
 			while(rs.next()) {
 				System.out.println("while");
-				Dept = new DeptDTO(rs.getString(1),rs.getString(2), rs.getString(3),
-						rs.getString(4), rs.getString(5));
+				Dept = new Member2DTO(rs.getString(1),rs.getString(2), rs.getString(3),
+						rs.getString(4), rs.getString(5),rs.getString(6),rs.getInt(7));
 				DeptList.add(Dept);
 		}
 	}catch(SQLException e) {
@@ -58,20 +59,22 @@ public class DeptDAOImpl implements DeptDAO {
 	return DeptList;
 	}
 	
-	public int insert(DeptDTO member) {
+	public int insert(Member2DTO member) {
 		Connection con = null;
 		PreparedStatement stmt = null;
-		String sql = "insert into mydept values(?,?,?,?,?)";
+		String sql = "insert into member values(?,?,?,?,?,?,?)";
 		
 		int result = 0;
 		try {
 			con = DBUtil.getConnect();
 			stmt = con.prepareStatement(sql);
-			stmt.setString(1, member.getDeptNo());
-			stmt.setString(2, member.getDeptName());
-			stmt.setString(3, member.getLoc());
-			stmt.setString(4, member.getTel());
-			stmt.setString(5, member.getMgr());
+			stmt.setString(1, member.getId());
+			stmt.setString(2, member.getPass());
+			stmt.setString(3, member.getName());
+			stmt.setString(4, member.getAddr());
+			stmt.setString(5, member.getDeptno());
+			stmt.setString(6, member.getGrade());
+			stmt.setInt(7, member.getPoint());
 			result = stmt.executeUpdate();
 			System.out.println(result+"개 행 삽입 성공");
 		}catch(SQLException e) {
@@ -80,25 +83,25 @@ public class DeptDAOImpl implements DeptDAO {
 			DBUtil.close(null, stmt, con);
 		}return result;
 	}
-	public DeptDTO read(String deptNo) {
-		DeptDTO read = new DeptDTO();
+	public Member2DTO read(String id) {
+		Member2DTO read = new Member2DTO();
 		
 		Connection con = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
-		String sql = "select * from mydept where deptNo = ?";
+		String sql = "select * from member where id = ?";
 		
 		try {
 			con = DBUtil.getConnect();
 			stmt = con.prepareStatement(sql);
-			stmt.setString(1, deptNo);
+			stmt.setString(1, id);
 			rs = stmt.executeQuery(); //select실행
 			//실행결과를 자바객체로 변환
 			//- 레코드가 여러 개 : DTO로 레코드를 변환하고 ArrayList에 add
 			//- 레코드가 한 개  : DTO로 레코드 변환
 			while(rs.next()) {
-				read = new DeptDTO(rs.getString(1),rs.getString(2), rs.getString(3),
-						rs.getString(4), rs.getString(5));
+				read = new Member2DTO(rs.getString(1),rs.getString(2), rs.getString(3),
+						rs.getString(4), rs.getString(5),rs.getString(6),rs.getInt(7));
 				
 		}
 			

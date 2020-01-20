@@ -1,4 +1,4 @@
-package fw;
+package member;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,27 +10,27 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet(name = "delete", urlPatterns = { "/dept/delete.do" })
-public class DeleteServlet extends HttpServlet {
+@WebServlet(name = "memDel", urlPatterns = { "/member/delete.do" })
+public class MemberDeleteServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("euc-kr");
 		response.setContentType("text/html;charset=euc-kr");
 		PrintWriter pw = response.getWriter();
 		
 		
-		String deno = request.getParameter("deptno");
+		String memberid = request.getParameter("id");
 		
 		
 		
-		DeptDAOImpl a = new DeptDAOImpl();
-		int result = a.delete(deno);
+		Member2DAOImpl a = new Member2DAOImpl();
+		int result = a.delete(memberid);
 		
 //		if(result==1) {
 //			pw.print("<h1>삭제성공</h1>");
 //		}else {
 //			pw.print("<h1>삭제실패</h1>");
 //		}
-		response.sendRedirect("/serverweb/dept/listf.do");
+		response.sendRedirect("/serverweb/member/list.do");
 		 
 		
 		

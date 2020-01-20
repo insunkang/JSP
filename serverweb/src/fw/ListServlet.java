@@ -23,7 +23,7 @@ public class ListServlet extends HttpServlet {
 		DeptDAOImpl dao = new DeptDAOImpl();
 		ArrayList<DeptDTO> deptlist = dao.DeptList();
 		
-		pw.print(deptlist);
+		
 		pw.print("<h1>부서목록보기</h1>");
 		pw.print("<hr/>");
 		pw.print("<table border ='1', width ='500px'>");

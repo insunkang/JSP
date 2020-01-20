@@ -2,6 +2,7 @@ package fw;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet(name = "deptinsert", urlPatterns = { "/deptinsert.do" })
-public class DeptServlet extends HttpServlet {
+@WebServlet(name = "deptinsert2", urlPatterns = { "/deptinsert2.do" })
+public class DeptServlet2 extends HttpServlet {
 
 	protected void doPost(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -23,10 +24,13 @@ public class DeptServlet extends HttpServlet {
 		DeptDTO member = new DeptDTO(deptNo,deptName,loc,tel,mgr);
 		
 		DeptDAOImpl a= new DeptDAOImpl();
-		int result = a.insert(member);
 		
+		System.out.println("ForwardServlet실행완료");
+		int result = a.insert(member);
+		req.setAttribute("mydata", result);
 		//3.응답화면으로 요청재지정
-		response.sendRedirect("/serverweb/dept/insertResult.html");
+		RequestDispatcher rd = req.getRequestDispatcher("/dept/insertResult.jsp");
+		rd.forward(req, response);
 		
 	}
 
